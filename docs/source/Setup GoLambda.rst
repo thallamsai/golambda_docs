@@ -31,9 +31,11 @@ Configure AWS CLI
 ^^^^^^^^^^^^^^^^^
 
 * run  `aws configure`
-* Access key ID: `AKIAIHXF4V7CQA3YILRA`
-* Secret access key: `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`
+* Access key ID: <>
+* Secret access key: <>
 * After configuration run `$(aws ecr get-login --no-include-email --region ap-south-1)` 
+
+Please refer diana_lambda readme file for credentials. 
 
 Start Development
 ^^^^^^^^^^^^^^^^^
