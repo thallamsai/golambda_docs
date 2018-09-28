@@ -46,10 +46,56 @@
 <h1>How to construct a Request<a class="headerlink" href="#how-to-construct-a-request" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="sample-request-format">
 <h2>Sample Request Format<a class="headerlink" href="#sample-request-format" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<tbody valign="top">
-</tbody>
-</table>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+ <span class="nt">&quot;subIntent&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;intent&quot;</span><span class="p">:</span> <span class="s2">&quot;greetings&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;context&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="nt">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;GI&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;last_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Shenoy&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;user_key&quot;</span><span class="p">:</span> <span class="s2">&quot;+917899057774&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;user_type&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="nt">&quot;analytics&quot;</span><span class="p">:</span> <span class="p">{</span>
+     <span class="nt">&quot;sub_vertical&quot;</span><span class="p">:</span> <span class="s2">&quot;DF&quot;</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="s2">&quot;bharath.shenoy@goibibo.com&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;intent&quot;</span><span class="p">:</span> <span class="s2">&quot;greetings&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;contextIntent&quot;</span><span class="p">:</span> <span class="p">{</span>
+     <span class="nt">&quot;score&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+     <span class="nt">&quot;intent&quot;</span><span class="p">:</span> <span class="s2">&quot;offers.list&quot;</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;conversation_id&quot;</span><span class="p">:</span> <span class="s2">&quot;000fb1a6-17ad-4bc2-900a-181a67940f51&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Earn gocash+ by confirming my check-in&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;trip_id&quot;</span><span class="p">:</span> <span class="s2">&quot;GI_WHATSAPP_+917899057774&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;e&quot;</span><span class="p">:</span> <span class="p">{</span>
+     <span class="nt">&quot;locale&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;intent&quot;</span><span class="p">:</span> <span class="s2">&quot;goMundu.customer.checkin&quot;</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;first_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bharath&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;user_id&quot;</span><span class="p">:</span> <span class="mi">27454860</span><span class="p">,</span>
+   <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+   <span class="nt">&quot;_user_id&quot;</span><span class="p">:</span> <span class="s2">&quot;9a106c22-ce8c-425a-a07a-fd0a2d234872&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;mobile&quot;</span><span class="p">:</span> <span class="s2">&quot;+917899057774&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;bharath.shenoy@goibibo.com&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;channel&quot;</span><span class="p">:</span> <span class="s2">&quot;Whatsapp&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;gi_trace_id&quot;</span><span class="p">:</span> <span class="s2">&quot;f5597600-6b87-426c-b47a-0f7c8ab05692&quot;</span><span class="p">,</span>
+
+   <span class="nt">&quot;inhouse_entities&quot;</span><span class="p">:</span> <span class="p">{</span>
+     <span class="nt">&quot;is_international&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+     <span class="nt">&quot;childs&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+     <span class="nt">&quot;adults&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+     <span class="nt">&quot;subIntent&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;locale&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;stars&quot;</span><span class="p">:</span> <span class="mi">0</span>
+   <span class="p">},</span>
+
+
+   <span class="nt">&quot;golambda_context&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="p">}</span>
+
+ <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p>Above is a sample request require to hit Golambda ActionHandler API. At root level it contains the following three keys:</p>
 <div class="section" id="intent">
 <h3>Intent<a class="headerlink" href="#intent" title="Permalink to this headline">¶</a></h3>
@@ -85,14 +131,15 @@
 </div>
 <div class="section" id="golambda-defined-entities">
 <h3>GoLambda defined entities<a class="headerlink" href="#golambda-defined-entities" title="Permalink to this headline">¶</a></h3>
-<p>These type of entities come into play when you asked the user a question and want some information about its current state along with the response. For e.g, if you want to store how many time you have continuously asked the same question to the user. You can store the count as some keyword <cite>retry</cite>, when the user responds you will get this count as
-<a href="#id1"><span class="problematic" id="id2">``</span></a>`
-“golambda_context”:{</p>
-<blockquote>
-<div>“retry”:5
-}</div></blockquote>
-<p><a href="#id3"><span class="problematic" id="id4">``</span></a>`
-In simple words, whatever entities you defined in your flow for the saving state of the user inside <cite>golamda_context</cite> will come here. For more details about saving state, refer Response class.</p>
+<p>These type of entities come into play when you asked the user a question and want some information about its current state along with the response. For e.g, if you want to store how many time you have continuously asked the same question to the user. You can store the count as some keyword <cite>retry</cite>, when the user responds you will get this count as</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;golambda_context&quot;</span><span class="p">:{</span>
+     <span class="nt">&quot;retry&quot;</span><span class="p">:</span><span class="mi">5</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In simple words, whatever entities you defined in your flow for the saving state of the user inside <cite>golamda_context</cite> will come here. For more details about saving state, refer Response class.</p>
 </div>
 </div>
 </div>
