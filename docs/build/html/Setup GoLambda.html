@@ -9,11 +9,13 @@
     <title>Setup GoLambda &#8212; Golambda 2.0 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxcontrib-httpexample.css" />
     
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sphinxcontrib-httpexample.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
@@ -93,33 +95,33 @@
 </div>
 <div class="section" id="test-your-setup">
 <h2>Test your Setup<a class="headerlink" href="#test-your-setup" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>::</dt>
-<dd><dl class="first last docutils">
-<dt>curl -X POST </dt>
-<dd><p class="first"><a class="reference external" href="http://localhost:8001/api/action_handler/">http://localhost:8001/api/action_handler/</a> -H ‘cache-control: no-cache’ -H ‘content-type: application/json’ </p>
-<blockquote>
-<div><dl class="docutils">
-<dt>-d ‘{</dt>
-<dd><blockquote class="first">
-<div><p>“subIntent”: “default”,
-“intent”: “&lt;Your intent&gt;”,
-“context”: {</p>
-<blockquote>
-<div>“email”: “&lt;any valid email&gt;”,</div></blockquote>
-</div></blockquote>
-<dl class="last docutils">
-<dt>“mobile”: “&lt;any valid phone number&gt;”</dt>
-<dd>}</dd>
-</dl>
-</dd>
-</dl>
-</div></blockquote>
-<p class="last">}</p>
-</dd>
-</dl>
-</dd>
-</dl>
+<div class="http-example docutils container">
+<div class="http-example-http docutils container" id="id1">
+<p class="caption"><span class="caption-text">http</span></p>
+<div class="highlight-http notranslate"><div class="highlight"><pre><span></span>    POST /api/action_handler/ HTTP/1.1
+Host: localhost:8081
+Accept: application/json
+Content-Type: application/json
+Authorization: Basic YWRtaW46YWRtaW4=
+
+{
+        &quot;subIntent&quot;: &quot;default&quot;,
+        &quot;intent&quot;: &quot;&lt;Your intent&gt;&quot;,
+        &quot;context&quot;: {
+                            &quot;email&quot;: &quot;&lt;any valid email&gt;&quot;,
+                    &quot;mobile&quot;: &quot;&lt;any valid phone number&gt;&quot;
+                    }
+    }
+</pre></div>
+</div>
+</div>
+<div class="http-example-curl docutils container" id="id2">
+<p class="caption"><span class="caption-text">curl</span></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -i -X POST http://localhost:8081/api/action_handler/ -H <span class="s1">&#39;Accept: application/json&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> --data-raw <span class="s1">&#39;{&quot;context&quot;: {&quot;email&quot;: &quot;&lt;any valid email&gt;&quot;, &quot;mobile&quot;: &quot;&lt;any valid phone number&gt;&quot;}, &quot;intent&quot;: &quot;&lt;Your intent&gt;&quot;, &quot;subIntent&quot;: &quot;default&quot;}&#39;</span> --user admin:admin
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 

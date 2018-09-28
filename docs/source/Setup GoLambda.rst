@@ -45,20 +45,19 @@ Start Development
 
 Test your Setup
 ^^^^^^^^^^^^^^^
-::
- curl -X POST \
-	http://localhost:8001/api/action_handler/ \
-	-H 'cache-control: no-cache' \
-	-H 'content-type: application/json' \
-	  -d '{
-		"subIntent": "default",
-		"intent": "<Your intent>",
-		"context": {
-			"email": "<any valid email>",
-	    "mobile": "<any valid phone number>"
-		}
+..  http:example:: curl
+
+	POST /api/action_handler/ HTTP/1.1
+    Host: localhost:8081
+    Accept: application/json
+    Content-Type: application/json
+    Authorization: Basic YWRtaW46YWRtaW4=
+
+    {
+	    "subIntent": "default",
+	    "intent": "<Your intent>",
+	    "context": {
+				"email": "<any valid email>",
+		        "mobile": "<any valid phone number>"
+		        }
 	}
-	
-
-
-
