@@ -33,7 +33,7 @@ Configure AWS CLI
 * run  `aws configure`
 * Access key ID: <>
 * Secret access key: <>
-* After configuration run `$(aws ecr get-login --no-include-email --region ap-south-1)` 
+* After configuration run ``$(aws ecr get-login --no-include-email --region ap-south-1)``
 
 Please refer diana_lambda readme file for credentials. 
 
@@ -43,7 +43,7 @@ Start Development
 * Download `docker-compose.yml`  and `Dockerfile-Dev` in the root directory of Lambda project
 * run `docker-compose build` and then `docker-compose up`
 * To initialise app: run `docker-compose exec golambda_vertical python generator.py init`
-* To add a new Action: run `docker-compose exec golambda_vertical python generator.py addAction`
+* To add a new Action: run ``docker-compose exec golambda_vertical python generator.py addAction``
 
 Test your Setup
 ^^^^^^^^^^^^^^^
