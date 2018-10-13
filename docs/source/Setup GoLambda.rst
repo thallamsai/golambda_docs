@@ -30,20 +30,24 @@ Setup AWS CLI
 Configure AWS CLI
 ^^^^^^^^^^^^^^^^^
 
-* run  `aws configure`
+* run  ``aws configure``
 * Access key ID: <>
 * Secret access key: <>
 * After configuration run ``$(aws ecr get-login --no-include-email --region ap-south-1)``
 
 Please refer diana_lambda readme file for credentials. 
 
-Start Development
-^^^^^^^^^^^^^^^^^
+Start Development - New Vertical and New Intent
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Download `docker-compose.yml`  and `Dockerfile-Dev` in the root directory of Lambda project
-* run `docker-compose build` and then `docker-compose up`
-* To initialise app: run `docker-compose exec golambda_vertical python generator.py init`
+* Clone the repo ``https://github.com/goibibo/golambda_vertical.git``
+* Your golambda project structure should be as below: 
+* run ``docker-compose build`` and then ``docker-compose up``
+* To initialise app: run ``docker-compose exec golambda_vertical python generator.py init``
+
 * To add a new Action: run ``docker-compose exec golambda_vertical python generator.py addAction``
+* - Domain = goibibo , Vertical = train
+* Copy from above repo `docker-compose.yml`  and `Dockerfile-Dev` in to the root directory of your Lambda project.
 
 Test your Setup
 ^^^^^^^^^^^^^^^
