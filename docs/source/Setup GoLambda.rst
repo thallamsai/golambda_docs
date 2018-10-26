@@ -56,6 +56,7 @@ After completing above steps mentioned in **Start Development - New Vertical and
 * Create directories <domain>/<vertical> like goibibo/train
 * Copy all your vertical related py files to <domain>/<vertical>
 * Copy contents of your config.py to config.py in root folder.
+* Create constants.py file in root folder. 
 * In config.py, append your folder path in OWNER_LIST, for eg. goibibo flights team will write ``OWNER_LIST = ["goibibo.flight"]`` 
 * In config.py file add your docker url like ``LAMBDA_URL = 'http://gia-train.goibibo.com' if settings.ENV_TYPE == 'prod' else 'http://0.0.0.0:8001'``
 * Copy your message files to message_yaml
