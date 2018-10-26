@@ -49,6 +49,19 @@ Start Development - New Vertical and New Intent
 * - Domain = goibibo , Vertical = train
 * Copy from above repo `docker-compose.yml`  and `Dockerfile-Dev` in to the root directory of your Lambda project.
 
+Steps to migrate from Diana lambda to Golambda 2.0
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Create directories <domain>/<vertical> like goibibo/train
+* Copy all your vertical related py files to <domain>/<vertical>
+* Copy contents of your config.py to config.py in root folder.
+* In config.py, append your folder path in OWNER_LIST, for eg. goibibo flights team will write ``OWNER_LIST = ["goibibo.flight"]`` 
+* In config.py file add your docker url like ``LAMBDA_URL = 'http://gia-train.goibibo.com' if settings.ENV_TYPE == 'prod' else 'http://0.0.0.0:8001'``
+* Copy your message files to message_yaml
+* Wherever there are references to constants and confing in your code, change import statment as ``from vertical.constants import DB_BOOKING_STATUS``
+
+
+
 Test your Setup
 ^^^^^^^^^^^^^^^
 ..  http:example:: curl
