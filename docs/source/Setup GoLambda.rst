@@ -59,6 +59,7 @@ Steps to migrate from Diana lambda to Golambda 2.0
 * In config.py file add your docker url like ``LAMBDA_URL = 'http://gia-train.goibibo.com' if settings.ENV_TYPE == 'prod' else 'http://0.0.0.0:8001'``
 * Copy your message files to message_yaml
 * Wherever there are references to constants and confing in your code, change import statment as ``from vertical.constants import DB_BOOKING_STATUS``
+* Replace ``golambda.goibibo`` to ``vertical.goibibo`` and ``golambda.makemytrip`` to ``vertical.makemytrip`` in all your py files. 
 
 
 
