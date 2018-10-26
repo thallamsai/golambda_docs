@@ -51,7 +51,7 @@ Start Development - New Vertical and New Intent
 
 Steps to migrate from Diana lambda to Golambda 2.0
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
+After completing above steps mentioned in **Start Development - New Vertical and New Intent** please follow below steps
 * Create directories <domain>/<vertical> like goibibo/train
 * Copy all your vertical related py files to <domain>/<vertical>
 * Copy contents of your config.py to config.py in root folder.
