@@ -42,7 +42,7 @@ Start Development - New Vertical and New Intent
 
 * Clone the repo ``https://github.com/goibibo/golambda_vertical.git``
 * Your golambda project structure should be as below: 
-* run ``docker-compose build`` and then ``docker-compose up``
+* run ``docker-compose build`` and then ``docker-compose up`` (if you already have a docker running in another application, restart your docker service before you run these commands)
 * To initialise app: run ``docker-compose exec golambda_vertical python generator.py init``
 
 * To add a new Action: run ``docker-compose exec golambda_vertical python generator.py addAction``
