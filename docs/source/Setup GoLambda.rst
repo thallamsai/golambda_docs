@@ -43,7 +43,7 @@ Start Development - New Vertical and New Intent
 * Clone the repo ``https://github.com/goibibo/golambda_vertical.git`` in a new location in working directory.
 * Your golambda project structure should be as below: 
 * run ``docker-compose build`` and then ``docker-compose up`` (if you already have a docker running in another application, restart your docker service before you run these commands)
-* To initialise app: run ``docker-compose exec golambda_vertical python generator.py init``
+* To initialise app: run ``docker-compose exec golambda_vertical python generator.py init`` in a new tab.
 
 * To add a new Action: run ``docker-compose exec golambda_vertical python generator.py addAction``
 * - Domain = goibibo , Vertical = train
@@ -57,7 +57,7 @@ After completing above steps mentioned in **Start Development - New Vertical and
 * Copy all your vertical related py files to <domain>/<vertical>
 * Copy contents of your config.py to config.py in root folder.
 * Create constants.py file in root folder. 
-* In config.py, append your folder path in OWNER_LIST, for eg. goibibo flights team will write ``OWNER_LIST = ["goibibo.flight"]`` 
+* In config.py of the root folder, append your folder path in OWNER_LIST, for eg. goibibo flights team will write ``OWNER_LIST = ["goibibo.flight"]`` 
 * In config.py file add your docker url like ``LAMBDA_URL = 'http://gia-train.goibibo.com' if settings.ENV_TYPE == 'prod' else 'http://0.0.0.0:8001'``
 * Copy your message files to message_yaml
 * Wherever there are references to constants and confing in your code, change import statment as ``from vertical.constants import DB_BOOKING_STATUS``
@@ -70,7 +70,7 @@ Test your Setup
 ..  http:example:: curl
 
 	POST /api/action_handler/ HTTP/1.1
-    Host: localhost:8081
+    Host: localhost:8001
     Accept: application/json
     Content-Type: application/json
     Authorization: Basic YWRtaW46YWRtaW4=
