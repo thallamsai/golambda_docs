@@ -35,7 +35,7 @@ Configure AWS CLI
 * Secret access key: <>
 * After configuration run ``$(aws ecr get-login --no-include-email --region ap-south-1)``
 
-Please refer diana_lambda readme file for credentials. 
+Please refer golambda_vertical (https://github.com/goibibo/golambda_vertical#configure-aws-cli) readme file for credentials. 
 
 Start Development - New Vertical and New Intent
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
